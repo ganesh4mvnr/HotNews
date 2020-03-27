@@ -1,0 +1,48 @@
+cqlsh
+USE newsfeed;
+
+CREATE TABLE app_conf(
+   id UUID PRIMARY KEY,
+   promo_enabled boolean,
+   app_menu_list text,
+   auth_required boolean
+   );
+   
+CREATE TABLE user_profile(
+   id UUID PRIMARY KEY,
+   dob text,
+   email_id text,
+   name text
+   );
+   
+   
+CREATE TABLE location_keyword_mapping(
+   id UUID PRIMARY KEY,
+   location text,
+   keyword text,
+   status text
+   );
+     
+CREATE TABLE source_filter(
+   id UUID PRIMARY KEY,
+   source_name text,
+   Source_logo text,
+   status text
+   );
+   
+   
+CREATE TABLE content_feed(
+   id UUID PRIMARY KEY,
+   content_type text,
+   source_name text,
+   source_logo_url text,
+   link_to_source text,
+   title text,
+   content text,
+   content_image_url text,
+   content_video_link text,
+   published_time text
+   );
+   
+   
+   

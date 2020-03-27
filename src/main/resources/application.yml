@@ -1,0 +1,19 @@
+# H2
+#spring.h2.console.enabled=true
+#spring.h2.console.path=/h2
+# Datasource
+#spring.datasource.url=jdbc:h2:file:~/test
+#spring.datasource.username=sa
+#spring.datasource.password=
+#spring.datasource.driver-class-name=org.h2.Driver
+
+
+#NewFeed URL http://newsapi.org/v2/everything?q=plano%20texas&apiKey=07a54746c3774c6c828c7dfd9c0e5699
+newsFeedEndpointURL: http://newsapi.org/v2/everything
+defaultSearchKey: plano texas
+newsFeedapiKey: 07a54746c3774c6c828c7dfd9c0e5699
+security:
+  user:
+    name: admin
+    password: admin
+

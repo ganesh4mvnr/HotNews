@@ -1,0 +1,7 @@
+spring:
+  data:
+    cassandra:
+      keyspace-name: redmekeyspace
+      port: 9042
+      contact-points: 127.0.0.1
+      basepackages: com.news.repository
