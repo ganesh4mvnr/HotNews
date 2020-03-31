@@ -12,8 +12,30 @@
 newsFeedEndpointURL: http://newsapi.org/v2/everything
 defaultSearchKey: plano texas
 newsFeedapiKey: 07a54746c3774c6c828c7dfd9c0e5699
-security:
-  user:
-    name: admin
-    password: admin
 
+server:
+  port: 8080
+  session:
+    cookie:
+      name: UISESSION
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration
+  thymeleaf:
+    cache: false
+  security:
+    user:
+      name: admin
+      password: admin
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: a82def5db4cf77d24eb9
+            client-secret: 429ccd1c8fbe59e139c9b38bf91899e45123dbab
+            access-token-uri: https://github.com/login/oauth/access_token
+            scope: read:user,user:email
+            provider: github
+            redirect-uri: http://localhost:8080/primeContent/Home/plano
+            client-authentication-method: basic
+            authorization-grant-type: authorization_code

@@ -20,7 +20,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.client.RestTemplate;
 
-//@Controller
+@Controller
 public class LoginController {
 
     private static final String authorizationRequestBaseUri = "oauth2/authorization";
@@ -43,7 +43,7 @@ public class LoginController {
         clientRegistrations.forEach(registration -> oauth2AuthenticationUrls.put(registration.getClientName(), authorizationRequestBaseUri + "/" + registration.getRegistrationId()));
         model.addAttribute("urls", oauth2AuthenticationUrls);
 
-        return "oauth_login";
+        return "loginSuccess";
     }
 
     @GetMapping("/loginSuccess")
